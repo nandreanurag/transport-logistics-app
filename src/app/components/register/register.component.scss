@@ -1,0 +1,19 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 100%;
+    // max-width: 60%;
+    margin-bottom: 20px;
+  }
+  
+  .form-field {
+    // width: 100%;
+    // margin-bottom: 10px;
+    width: 400px;
+  }
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,85 @@
+<form class="register-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <h1 mat-dialog-title>{{data.title}}</h1>
+    <div class="form-container">
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required>
+            <mat-error
+                *ngIf="registrationForm.controls['firstName'].invalid && registrationForm.controls['firstName'].touched">
+                First Name is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required>
+            <mat-error
+                *ngIf="registrationForm.controls['lastName'].invalid && registrationForm.controls['lastName'].touched">
+                Last Name is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="emailId" required email>
+            <mat-error *ngIf="registrationForm.controls['emailId'].invalid && registrationForm.controls['emailId'].touched">
+                Please enter a valid email address.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" required minlength="6">
+            <mat-error
+                *ngIf="registrationForm.controls['password'].invalid && registrationForm.controls['password'].touched">
+                Password must be at least 6 characters long.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Passport Number</mat-label>
+            <input matInput formControlName="passportNumber" required>
+            <mat-error
+                *ngIf="registrationForm.controls['passportNumber'].invalid && registrationForm.controls['passportNumber'].touched">
+                Passport Number is required.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Nationality</mat-label>
+            <mat-select formControlName="nationality" [(value)]="selectedValue" required>
+                <mat-option *ngFor="let nationality of nationalities" [value]="nationality">{{ nationality
+                    }}</mat-option>
+            </mat-select>
+            <mat-error
+                *ngIf="registrationForm.controls['nationality'].invalid && registrationForm.controls['nationality'].touched">
+                Nationality is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Permanent Address</mat-label>
+            <textarea matInput formControlName="permanentAddress" required></textarea>
+            <mat-error
+                *ngIf="registrationForm.controls['permanentAddress'].invalid && registrationForm.controls['permanentAddress'].touched">
+                Permanent Address is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Personal Identification Number</mat-label>
+            <input matInput formControlName="personalIdentificationNumber" required>
+            <mat-error
+                *ngIf="registrationForm.controls['personalIdentificationNumber'].invalid && registrationForm.controls['personalIdentificationNumber'].touched">
+                Personal Identification Number is required.
+            </mat-error>
+        </mat-form-field>
+
+
+
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="registrationForm.invalid">Register</button>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+    </div>
+</form>

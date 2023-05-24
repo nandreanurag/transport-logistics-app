@@ -1,0 +1,30 @@
+span{
+    cursor: pointer;
+}
+.navbar-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    font-weight: bold;
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    margin-right: 20px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.mat-button{
+    background: white;
+}

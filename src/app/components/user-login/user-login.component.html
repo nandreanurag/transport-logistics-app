@@ -1,0 +1,25 @@
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1 mat-dialog-title>{{data.title}}</h1>
+    <div class="form-container">
+        <mat-form-field appearance="outline" floatLabel="auto" class="form-field">
+            <mat-label>User ID</mat-label>
+            <input matInput formControlName="userId" required>
+            <mat-error *ngIf="loginForm.controls['userId'].invalid && loginForm.controls['userId'].touched">
+                User ID is required.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" required>
+            <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+                Password is required.
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+    </div>
+    <!-- <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button> -->
+</form>

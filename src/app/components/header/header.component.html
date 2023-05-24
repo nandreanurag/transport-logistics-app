@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <div class="navbar-left">
+      <span class="navbar-title">FTR</span>
+    </div>
+    <div class="navbar-center">
+        <mat-icon aria-hidden="false" aria-label="home icon" fontIcon="settings"></mat-icon><span class="navbar-item"
+        (click)="serviceHandler()">Services</span>
+    <mat-icon aria-hidden="false" aria-label="group icon" fontIcon="group"></mat-icon><span
+        (click)="aboutHandler()">About Us</span>
+    </div>
+    <div class="navbar-right">
+        <mat-icon aria-hidden="false" aria-label="user icon" fontIcon="person"></mat-icon><span class="navbar-item" (click)="openUserLoginDialog()">User</span>
+        <mat-icon aria-hidden="false" aria-label="admin icon"
+            fontIcon="supervisor_account"></mat-icon><span class="navbar-item" (click)="openAdminLoginDialog()">Admin</span>
+        <mat-icon aria-hidden="false" aria-label="register icon" fontIcon="person_add"></mat-icon><span class="navbar-item" (click)="openRegisterDialog()">Register</span>
+    </div>
+  </mat-toolbar>
+  

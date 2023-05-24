@@ -1,0 +1,27 @@
+span{
+    cursor: pointer;
+}
+.navbar-left {
+  flex: 0.2;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-weight: bold;
+}
+
+.navbar-center {
+  flex:0.8;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-right: 20px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,91 @@
+.main-dashboard-block {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://img.sdcexec.com/files/base/acbm/scn/image/2023/04/AdobeStock_499354833.642dcd4544895.png?auto=format%2Ccompress&q=70);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    width: 85vw;
+    height: 98vh;
+}
+
+mat-card {
+    background-color: rgb(215, 215, 215);
+}
+
+mat-card-title {
+    margin: 10px 16px 20px;
+    background-color: white;
+    border-radius: 3px;
+    padding-left: 15px;
+    color: black
+}
+
+.filter-input {
+    width: 20vw;
+    margin-right: 5px;
+}
+
+.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
+    border: 2px solid black
+}
+
+.search-input-label {
+    margin-left: 55%;
+    margin-right: 1%
+}
+
+mat-icon {
+    margin-right: 3%;
+}
+
+.form-field {
+    // display: flex;
+    // align-items: center;
+    width: 100% // flex-direction: row;
+        // flex:2
+
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.select-container {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+    width: 100%
+}
+
+.flex-item {
+    flex: 0.2;
+    margin-right: 10px;
+}
+
+.admin-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5px 0px 0px; /* Padding: top, right, bottom, left */
+}
+
+
+.admin-form-container button {
+    // width: 10%;
+    // height:50%
+    margin-bottom: 5px;
+
+}
+
+.filter-input input {
+    width: 70%;
+}
